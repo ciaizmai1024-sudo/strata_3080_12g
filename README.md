@@ -35,6 +35,24 @@ agents. Your chats and files stay on your PC.
 
 Version 0.2.1 · engine 0.1.46
 
+## This deployment (strata_3080_12g)
+
+This repository is a source snapshot of Strata v0.2.1 (engine 0.1.46) with no upstream git history, build for one
+machine: a desktop PC with a single 12 GB RTX 3080. The engine is compiled locally for compute capability 8.6.
+Build outputs, downloaded models, logs and benchmark dumps are kept out of git (see `.gitignore`).
+
+| Item | This machine |
+|---|---|
+| OS | Ubuntu 24.04.5 LTS (kernel 6.8.0-142-generic, x86_64) |
+| CPU | Intel Core i7-12700KF, 20 threads (8P + 4E) |
+| System RAM | 64 GB |
+| GPU | NVIDIA GeForce RTX 3080, 12 GB VRAM (compute capability 8.6), one card |
+| GPU driver / CUDA | driver 595.99.02 · built with CUDA 13.2, `archs: [86]` |
+| Model served | Qwen3.8-Flash-Next, IQ3_S pack, 200K context, q4_0 KV cache, `--spec 4`, vision on CPU |
+
+本机部署：Ubuntu 24.04.5 + i7-12700KF + 64 GB 内存 + 单卡 RTX 3080 12G（驱动 595.99.02，CUDA 13.2 编译，sm_86），
+运行 IQ3_S 量化、200K 上下文的 Qwen3.8-Flash-Next。
+
 ## What you need
 
 **You need at least 32 GB of RAM and graphics memory (VRAM) together.** On a Mac or a Ryzen AI Max, that is the unified
